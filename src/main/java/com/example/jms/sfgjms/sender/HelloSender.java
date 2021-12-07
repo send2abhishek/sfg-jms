@@ -16,6 +16,7 @@ public class HelloSender {
 
     private final JmsTemplate jmsTemplate;
 
+    // this will be called by the task taskExecutor which we have setup in the task config
     @Scheduled(fixedRate = 2000)
     public void sendMessage(){
         System.out.println("I am a sending message");
